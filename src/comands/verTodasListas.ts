@@ -13,6 +13,6 @@ export default async function (bot: Ibot) {
   }
   let listName = list.map((x) => x.tipoDeCliente)
   listName = listName.filter((x, v) => { return listName.indexOf(x) == v; })
-  const template = `seguem todas as listas cadastradas:${listName.map((v, i) => { return `[${i}] ${v}` })}`.replace(/,/g, "");
+  const template = `seguem todas as listas cadastradas:\n${listName.map((v, i) => { return `\n[${i}] ${v}` })}`.replace(/,/g, "");
   return reply(template);
 }
