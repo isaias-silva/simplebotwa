@@ -35,7 +35,7 @@ export default async function (bot: Ibot, message: proto.IMessage) {
   await reply(
     "Mensagem marcada para " +
       item[1] +
-      "\n(Rique atendo ao terminal, você será avisado por aqui também.)"
+      "\n(Fique atendo ao terminal, você será avisado por aqui também.)"
   );
   const listName = item[0].trim();
 

@@ -83,7 +83,7 @@ export default async function (
       let complex = questions[cFlux].possivelResposta.split(",");
       let inclue = false;
       complex.map((value: any) => {
-        if (message.includes(value)) {
+        if (message.includes(value) || message.includes(value[0].toUpperCase() + value.substring(1))) {
           inclue = true;
         }
       });

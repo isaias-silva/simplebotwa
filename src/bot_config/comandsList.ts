@@ -11,6 +11,7 @@ export default [
   { comand: "verFluxo",resume: "Busca e exibe perguntas de um fluxo pelo nome" },
   { comand: "verTodosFluxos",resume: "Exibe todos os fluxos cadastrados." },
   { comand: "apagarFluxo",resume: "Deleta um fluxo pelo nome" },
+  { comand: "verTodasListas",resume: "Busca e exibe todas as listas" },
   { comand: "verCliente",resume: "Busca e exibe um cliente" },
   { comand: "msgExtra",resume: "Exibe listas de extras salvas de determinado contato" },
   { comand: "disparo", resume: "Envia mensagem para a lista selecionada" },

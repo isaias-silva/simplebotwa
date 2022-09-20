@@ -22,6 +22,7 @@ import verFluxo from "../comands/verFluxo";
 import verTodosFluxos from "../comands/verTodosFluxos";
 import deletarFluxo from "../comands/deletarFluxo";
 import disparoFluxo from "../comands/disparoFluxo";
+import verTodasListas from "../comands/verTodasListas";
 
 //checar se mensagem é um comando
 export function isComand(message: proto.IMessage) {
@@ -128,6 +129,9 @@ export async function caseComand(bot: Ibot) {
       break;
     case `disparoFluxo`:
       await disparoFluxo(bot, comand[1]);
+      break;
+    case `verTodasListas`:
+      await verTodasListas(bot)
       break;
     default:
       bot.reply(`erro interno!`);
