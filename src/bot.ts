@@ -10,7 +10,7 @@ import { isComand, caseComand, searchComand } from "./functions/treatComand";
 export async function bot() {
   const socket = await Connect();
   socket.ev.on("messages.upsert", async (msg) => {
-    //console.log('entrou')
+  
     const [webMessage] = msg.messages;
     const bot = botFunctions(webMessage, socket);
     const { reply, isOwner,isUser } = bot;
@@ -27,13 +27,17 @@ export async function bot() {
     if (message) {
       interaction(bot, message);
     }
-    if (!(await isOwner(number))&& !(await isUser(number)) ) {
+    const iswon=await isOwner(number)
+    const isus=await isUser(number)
+    if (!iswon && !isus ) {
+      console.log(number)
       return;
-    }
-
+   }
+    console.log("oioi")
     if (!message) {
       return;
     }
+    
     const newlist = await isTxt(message);
     isResponseOwner(bot, message);
     isResponseTemp(bot, message);

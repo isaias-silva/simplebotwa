@@ -1,6 +1,6 @@
 export const data = {
   botname: "",
-  owner: ["558896013063"],
+  owner: ["558896013063","5521984191603"],
   user:[],
   prefix: "!",
   version: "1.0",

@@ -12,8 +12,10 @@ export const botFunctions = (
   const botInfo = socket.user;
   const isOwner = async (number: string) => {
     let numberFormated = number.split(`@`)[0];
-    for await (let numberOw of data.owner) {
+    for (let numberOw of data.owner) {
+      console.log(numberOw)
       if (numberFormated == numberOw) {
+        
         return true;
       }
     }
